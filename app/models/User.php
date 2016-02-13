@@ -1,4 +1,4 @@
-<?php
+<?php namespace Models;
 
     Class User extends \Illuminate\Database\Eloquent\Model {
 

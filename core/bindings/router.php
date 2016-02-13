@@ -1,10 +1,9 @@
 <?php
 
-    $controllersDir = $__PATH.'controllers';
-    $modelsDir = $__PATH.'models';
+    $controllersDir = $__PATH . 'app/controllers';
 
     Illuminate\Support\Classloader::register();
-    Illuminate\Support\Classloader::addDirectories(array($controllersDir, $modelsDir));
+    Illuminate\Support\Classloader::addDirectories(array($controllersDir));
 
     $app = new Illuminate\Container\Container;
     Illuminate\Support\Facades\Facade::setFacadeApplication($app);
@@ -17,7 +16,7 @@
 
     $router = $app['router'];
 
-    require $__PATH.'routes.php';
+    require $__PATH . 'app/routes.php';
 
     $app['router'] = $router;
 

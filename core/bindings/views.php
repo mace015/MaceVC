@@ -2,8 +2,8 @@
 
     use Philo\Blade\Blade;
 
-    $views = $__PATH.'views';
-    $cache = $__PATH.'core/cache';
+    $views = $__PATH . 'app/views';
+    $cache = $__PATH . 'core/cache';
 
     $blade = new Blade($views, $cache);
 

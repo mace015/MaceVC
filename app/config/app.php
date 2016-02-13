@@ -5,10 +5,13 @@
 
         'debug' => true,
 
+        'url' => 'http://framework.dev:8000/',
+
         'bindings' => array(
             'core/bindings/database',
             'core/bindings/errors',
             'core/bindings/views',
+            'core/bindings/helpers',
             'core/bindings/router'
         ),
 
