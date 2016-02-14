@@ -16,7 +16,17 @@
 
     $router = $app['router'];
 
-    require $__PATH . 'app/routes.php';
+    $middlewares = '';
+
+    foreach ($__CONFIG['middleware'] as $key => $middleware){
+        $__CONFIG['middleware'][$key] = '\\' . ltrim($middleware, '\\');
+    }
+
+    $router->group(array('middleware' => $__CONFIG['middleware']), function() use ($__PATH, $router){
+
+        require $__PATH . 'app/routes.php';
+
+    });
 
     $app['router'] = $router;
 

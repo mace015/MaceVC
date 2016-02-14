@@ -9,7 +9,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Models\\": "app/models/"
+            "Models\\": "app/models/",
+            "Middleware\\": "app/middleware/"
         }
     }
 }

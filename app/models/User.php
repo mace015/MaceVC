@@ -1,6 +1,6 @@
 <?php namespace Models;
 
-    Class User extends \Illuminate\Database\Eloquent\Model {
+    class User extends \Illuminate\Database\Eloquent\Model {
 
         public $timestamps = false;
 

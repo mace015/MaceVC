@@ -7,6 +7,10 @@
 
         'url' => 'http://framework.dev:8000/',
 
+        'middleware' => array(
+            '\Middleware\GeneralMiddleware'
+        ),
+
         'bindings' => array(
             'core/bindings/database',
             'core/bindings/errors',

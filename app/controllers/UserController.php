@@ -1,8 +1,10 @@
 <?php
 
     use \Models\User;
+    
+    use Illuminate\Routing\Controller;
 
-    Class UserController extends Illuminate\Routing\Controller {
+    class UserController extends Controller {
 
         public function showUser(){
 
