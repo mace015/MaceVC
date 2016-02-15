@@ -18,6 +18,8 @@ Get started now!
 ```
 git clone https://github.com/mace015/MaceVC.git
 
+cd MaceVC
+
 composer install
 ```
 

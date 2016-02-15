@@ -12,11 +12,11 @@
         ),
 
         'bindings' => array(
-            'core/bindings/database',
-            'core/bindings/errors',
-            'core/bindings/views',
-            'core/bindings/helpers',
-            'core/bindings/router'
+            'core/bindings/database/database',
+            'core/bindings/errors/errors',
+            'core/bindings/views/views',
+            'core/bindings/helpers/helpers',
+            'core/bindings/router/router'
         ),
 
         'database' => array(

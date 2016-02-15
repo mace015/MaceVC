@@ -1,7 +1,7 @@
 <?php
 
     use \Models\User;
-    
+
     use Illuminate\Routing\Controller;
 
     class UserController extends Controller {

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "48327835da0bdd4822430a6a625ea7b0",
-    "content-hash": "a79d3604b8815035f40058551f0f5e68",
+    "hash": "a1baf24b57cb89a647c07de936b70708",
+    "content-hash": "bc4980b81b43a8bc99aa803c37da0a8c",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -220,16 +220,16 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v5.2.7",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "7072548f8a2933230e7f3e7199b78496fda964b5"
+                "reference": "af0e0d1cb4e4abf18eae6400c4ed5685a69a9e41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/7072548f8a2933230e7f3e7199b78496fda964b5",
-                "reference": "7072548f8a2933230e7f3e7199b78496fda964b5",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/af0e0d1cb4e4abf18eae6400c4ed5685a69a9e41",
+                "reference": "af0e0d1cb4e4abf18eae6400c4ed5685a69a9e41",
                 "shasum": ""
             },
             "require": {
@@ -276,20 +276,20 @@
                 "orm",
                 "sql"
             ],
-            "time": "2016-01-06 16:20:30"
+            "time": "2015-12-20 16:11:11"
         },
         {
             "name": "illuminate/events",
-            "version": "v5.2.7",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
-                "reference": "aeebcd54a61ce3bddddcb0273b532256201cd9d1"
+                "reference": "189f1915846101ecb93a9b2fc2dadb1e8c7d1b42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/events/zipball/aeebcd54a61ce3bddddcb0273b532256201cd9d1",
-                "reference": "aeebcd54a61ce3bddddcb0273b532256201cd9d1",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/189f1915846101ecb93a9b2fc2dadb1e8c7d1b42",
+                "reference": "189f1915846101ecb93a9b2fc2dadb1e8c7d1b42",
                 "shasum": ""
             },
             "require": {
@@ -321,7 +321,7 @@
             ],
             "description": "The Illuminate Events package.",
             "homepage": "http://laravel.com",
-            "time": "2016-01-01 01:00:19"
+            "time": "2015-11-30 19:26:21"
         },
         {
             "name": "illuminate/filesystem",
@@ -465,16 +465,16 @@
         },
         {
             "name": "illuminate/routing",
-            "version": "v5.2.7",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/routing.git",
-                "reference": "b1c94daa8ed3db340df079c571666ce41c3259c0"
+                "reference": "e3faa0cee947ce742e451ac84ea79bcd28067113"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/routing/zipball/b1c94daa8ed3db340df079c571666ce41c3259c0",
-                "reference": "b1c94daa8ed3db340df079c571666ce41c3259c0",
+                "url": "https://api.github.com/repos/illuminate/routing/zipball/e3faa0cee947ce742e451ac84ea79bcd28067113",
+                "reference": "e3faa0cee947ce742e451ac84ea79bcd28067113",
                 "shasum": ""
             },
             "require": {
@@ -516,7 +516,7 @@
             ],
             "description": "The Illuminate Routing package.",
             "homepage": "http://laravel.com",
-            "time": "2016-01-07 11:03:17"
+            "time": "2015-12-21 16:45:17"
         },
         {
             "name": "illuminate/session",
