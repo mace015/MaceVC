@@ -28,3 +28,30 @@ composer install
 
  * [Mace Muilman](http://macemuilman.nl) ([Github](https://github.com/mace015)) Creator of MaceVC
  * Want to add your name here? Create something great and submit a pull request!
+
+### Changelog:
+
+* 0.5
+
+Added a CLI (Command Line Interface) that makes it easy to create new Controllers, Models and Middlewares.
+The CLI can be easily started by using `php console` in the root folder of a MaceVC project.
+
+* 0.4
+
+Added a pretty error page for production when an exception is thrown, can be changed right now by simply editing `core/bindings/errors/errorTemplate.php`, later on it will be posibile to use a custom file path for this file.
+
+* 0.3
+
+Added routes specific and global middlewares, these are stored in `app/middlewares/`.
+
+* 0.2
+
+Completely overhauled the folder structure of the framework, we now have a nice `public/` folder from where the application is started.
+
+Also added the function `asset()` to easily load assets into blade templates from the `public/` directory.
+
+* 0.1
+
+Today is a fantastic day, on `$this->day()` ;) we embark on an adventure to create a beautiful framework inspired by Laravel.
+
+Added Eloquent ORM (database driver), pretty errors, routing (laravel style), the awesome blade templating engine and last but not least, `.env` environment variables.
