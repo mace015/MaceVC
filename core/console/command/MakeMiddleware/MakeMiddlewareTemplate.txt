@@ -1,0 +1,17 @@
+<?php namespace Middleware;
+
+    use Closure;
+
+    class [MIDDLEWARE_NAME] {
+
+        public function handle($request, Closure $next){
+
+            // Your middleware logic here
+
+            return $next($request);
+
+        }
+
+    }
+
+?>

@@ -1,0 +1,9 @@
+<?php
+
+    $__PATH = dirname(__FILE__).'/';
+
+    require $__PATH . '/vendor/autoload.php';
+
+    require $__PATH . '/core/console/console.php';
+
+?>

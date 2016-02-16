@@ -1,4 +1,4 @@
-# MaceVC, a PHP framework.
+# MaceVC, a PHP framework, version 0.5.
 
 MaceVC, is a PHP framework inspired heavily by Laravel, and build on several Laravel components and other populair packages, anyone farmillair with Laravel will feel right at home in MaceVC.
 
@@ -9,6 +9,7 @@ Some of the features supported by MaceVC:
  * Eloquent ORM.
  * Views with the Blade templating engine.
  * Pretty error messaging in the Laravel 4 style.
+ * CLI (Command Line Interface) for easily creating Controllers, Models and Middlewares!
 
 
 There are lots of features that have yet to be implemented, if you have any good ideas, feel free to submit a pull request!
@@ -25,5 +26,5 @@ composer install
 
 ### Contributors:
 
- * [Mace Muilman](http://macemuilman.nl) Creator of MaceVC
+ * [Mace Muilman](http://macemuilman.nl) ([Github](https://github.com/mace015)) Creator of MaceVC
  * Want to add your name here? Create something great and submit a pull request!

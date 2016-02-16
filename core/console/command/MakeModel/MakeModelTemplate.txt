@@ -1,0 +1,13 @@
+<?php namespace Models;
+
+    use Illuminate\Database\Eloquent\Model;
+
+    class [MODEL_NAME] extends Model {
+
+        protected $table = '[MODEL_NAME]';
+
+        protected $guarded = array('id');
+
+    }
+
+?>

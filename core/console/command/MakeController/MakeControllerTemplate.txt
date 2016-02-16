@@ -1,0 +1,11 @@
+<?php
+
+    use Illuminate\Routing\Controller;
+
+    class [CONTROLLER_NAME] extends Controller {
+
+        // Your controller methods here.
+
+    }
+
+?>
