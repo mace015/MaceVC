@@ -10,7 +10,7 @@ Some of the features supported by MaceVC:
  * Views with the Blade templating engine.
  * Pretty error messaging in the Laravel 4 style.
  * CLI (Command Line Interface) for easily creating Controllers, Models and Middlewares!
- * Easy mailing with the build in mail class!
+ * Easy mailing with the build-in mail class!
 
 
 There are lots of features that have yet to be implemented, if you have any good ideas, feel free to submit a pull request!
@@ -34,7 +34,7 @@ composer install
 
 * 0.6
 
-Added a custom mail class (build on top of phpmailer) to easily send mails!
+Added a build-in mail class (build on top of phpmailer) to easily send mails!
 The `Mail::send` function accepts 3 parameters: `$view (path to a blade view)`, `$data (data passed into the blade view)`, `$callback (a callback for extended options)`.
 Inside the last parameter, `$callback`, you can set any option [PHPMailer](https://github.com/PHPMailer/PHPMailer) has to offer!
 ```php
