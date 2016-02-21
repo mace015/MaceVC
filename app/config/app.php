@@ -7,6 +7,8 @@
 
         'url' => 'http://framework.dev:8000/',
 
+        'email' => 'test@macevc.com',
+
         'name' => 'MaceVC',
 
         'middleware' => array(
@@ -25,10 +27,11 @@
         ),
 
         'bindings' => array(
+            'core/bindings/config/config',
+            'core/bindings/helpers/helpers',
             'core/bindings/database/database',
             'core/bindings/errors/errors',
             'core/bindings/views/views',
-            'core/bindings/helpers/helpers',
             'core/bindings/mail/mail',
             'core/bindings/router/router'
         ),

@@ -1,4 +1,4 @@
-# MaceVC, a PHP framework, version 0.6.
+# MaceVC, a PHP framework, version 0.7.
 
 MaceVC, is a PHP framework inspired heavily by Laravel, and build on several Laravel components and other populair packages, anyone familiar with Laravel will feel right at home in MaceVC.
 
@@ -11,7 +11,6 @@ Some of the features supported by MaceVC:
  * Pretty error messaging in the Laravel 4 style.
  * CLI (Command Line Interface) for easily creating Controllers, Models and Middlewares!
  * Easy mailing with the build-in mail class!
-
 
 There are lots of features that have yet to be implemented, if you have any good ideas, feel free to submit a pull request!
 
@@ -28,9 +27,17 @@ composer install
 ### Contributors:
 
  * [Mace Muilman](http://macemuilman.nl) ([Github](https://github.com/mace015)) Creator of MaceVC
+ * [Martijn de Ridder](http://moodles.nl) ([Github](https://github.com/moodlesmedia)) Extensive testing
  * Want to add your name here? Create something great and submit a pull request!
 
 ### Changelog:
+
+* 0.7
+
+Added a class for reading the config, for example, if I want to read the debug setting in the app.php file in the config folder, i would do it like this: `Config::get('app.debug')`.
+I would highly recommend you use `$__CONFIG` in any custom bindings so its not dependant on the config binding!
+
+Added a demo env file (`env_demo`) and a `.htaccess` file out of the box;
 
 * 0.6
 

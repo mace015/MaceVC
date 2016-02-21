@@ -18,11 +18,11 @@
 
     $middlewares = '';
 
-    foreach ($__CONFIG['middleware'] as $key => $middleware){
-        $__CONFIG['middleware'][$key] = '\\' . ltrim($middleware, '\\');
+    foreach ($__CONFIG['app']['middleware'] as $key => $middleware){
+        $__CONFIG['app']['middleware'][$key] = '\\' . ltrim($middleware, '\\');
     }
 
-    $router->group(array('middleware' => $__CONFIG['middleware']), function() use ($__PATH, $router){
+    $router->group(array('middleware' => $__CONFIG['app']['middleware']), function() use ($__PATH, $router){
 
         require $__PATH . 'app/routes.php';
 

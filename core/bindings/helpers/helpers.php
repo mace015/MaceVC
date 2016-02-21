@@ -6,7 +6,7 @@
 
             global $__CONFIG;
 
-            return rtrim($__CONFIG['url'], '/') . '/' . ltrim($url, '/');
+            return rtrim($__CONFIG['app']['url'], '/') . '/' . ltrim($url, '/');
 
         }
 

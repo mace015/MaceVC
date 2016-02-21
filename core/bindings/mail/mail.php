@@ -10,19 +10,19 @@ class Mail {
 
         $mail = new PHPMailer;
 
-        $mail->setFrom($__CONFIG['name']);
+        $mail->setFrom($__CONFIG['app']['email'], $__CONFIG['app']['name']);
 
-        if ($__CONFIG['mail']['type'] == 'smtp'){
+        if ($__CONFIG['app']['mail']['type'] == 'smtp'){
 
             $mail->isSMTP();
-            $mail->Host = $__CONFIG['mail']['smtp']['host'];
+            $mail->Host = $__CONFIG['app']['mail']['smtp']['host'];
             $mail->SMTPAuth = true;
-            $mail->Username = $__CONFIG['mail']['smtp']['username'];
-            $mail->Password = $__CONFIG['mail']['smtp']['password'];
-            $mail->SMTPSecure = $__CONFIG['mail']['smtp']['encryption'];
-            $mail->Port = $__CONFIG['mail']['smtp']['port'];
+            $mail->Username = $__CONFIG['app']['mail']['smtp']['username'];
+            $mail->Password = $__CONFIG['app']['mail']['smtp']['password'];
+            $mail->SMTPSecure = $__CONFIG['app']['mail']['smtp']['encryption'];
+            $mail->Port = $__CONFIG['app']['mail']['smtp']['port'];
 
-            $mail->setFrom($__CONFIG['mail']['smtp']['username'], $__CONFIG['name']);
+            $mail->setFrom($__CONFIG['app']['mail']['smtp']['username'], $__CONFIG['app']['name']);
 
         }
 

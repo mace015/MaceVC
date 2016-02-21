@@ -1,0 +1,11 @@
+// Fill in your own details below , rename this file to .env and remove this line!
+DB_HOST=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+
+SMTP_HOST=
+SMTP_PORT=
+SMTP_ENCRYPTION=
+SMTP_USERNAME=
+SMTP_PASSWORD=

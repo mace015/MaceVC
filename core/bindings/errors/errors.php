@@ -6,7 +6,7 @@
 
     $error = new Run;
 
-    if ($__CONFIG['debug']){
+    if ($__CONFIG['app']['debug']){
 
         $error->pushHandler(new Whoops\Handler\PrettyPageHandler);
 

@@ -10,10 +10,15 @@
     require($__PATH . 'vendor/illuminate/support/helpers.php');
 
     // Load config file.
-    $__CONFIG = require($__PATH . 'app/config/app.php');
+    $__CONFIG = array();
+    foreach (glob($__PATH . "app/config/*.php") as $filename){
+        $array_name = explode('/', $filename);
+        $array_name = str_replace('.php', '', end($array_name));
+        $__CONFIG[$array_name] = require($filename);
+    }
 
     // Load all bindings.
-    foreach ($__CONFIG['bindings'] as $binding){
+    foreach ($__CONFIG['app']['bindings'] as $binding){
         require($__PATH . $binding . '.php');
     }
 

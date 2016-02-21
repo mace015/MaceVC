@@ -4,7 +4,7 @@
 
     $capsule = new Capsule;
 
-    $capsule->addConnection( $__CONFIG['database'] );
+    $capsule->addConnection( $__CONFIG['app']['database'] );
 
     $capsule->bootEloquent();
 
