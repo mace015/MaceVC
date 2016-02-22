@@ -11,6 +11,7 @@ Some of the features supported by MaceVC:
  * Pretty error messaging in the Laravel 4 style.
  * CLI (Command Line Interface) for easily creating Controllers, Models and Middlewares!
  * Easy mailing with the build-in mail class!
+ * Session driver for easy use of sessions.
 
 There are lots of features that have yet to be implemented, if you have any good ideas, feel free to submit a pull request!
 
@@ -44,11 +45,16 @@ Added csrf token validation for post calls, every form that is submitted with th
 If you do not wish to use csrf tokens, simply disable the CsrfToken middleware in the `config/app.php` config file.
 
 Added a easy session driver which support the following methods:
-    - `Session::store($key, $value)`, sets the session to its key and value.
-    - `Session::get($key)`, returns a session with that key, if the key is left empty, all sessions will be returned.
-    - `Session::delete($key)`, deletes a session with the given key.
-    - `Session::flush()`, flushes all the sessions.
-    - `Session::exists($key)`, returns `true` if the session exists or `false` if it does not exists.
+
+`Session::store($key, $value)`, sets the session to its key and value.
+
+`Session::get($key)`, returns a session with that key, if the key is left empty, all sessions will be returned.
+
+`Session::delete($key)`, deletes a session with the given key.
+
+`Session::flush()`, flushes all the sessions.
+
+`Session::exists($key)`, returns `true` if the session exists or `false` if it does not exists.
 
 * 0.7
 
