@@ -35,7 +35,8 @@
 
     $request = new Request;
 
-    $UrlWrapper = (new UrlGenerator($router->getRoutes(), $request))->forceRootUrl( $__CONFIG['app']['url'] );
+    $UrlWrapper = new UrlGenerator($router->getRoutes(), $request);
+    $UrlWrapper->forceRootUrl($__CONFIG['app']['url']);
 
     class URL {
 
