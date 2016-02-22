@@ -1,5 +1,11 @@
 <?php
 
+    // Set error reporting level.
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
+
+    // Start the sessions.
+    session_start();
+
     // Load the autload file for Composer dependancies.
     require($__PATH . 'vendor/autoload.php');
 

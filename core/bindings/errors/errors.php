@@ -14,7 +14,7 @@
 
         $error->pushHandler(function() use ($__PATH){
 
-            (new TemplateHelper())->render($__PATH . 'core/bindings/errors/errorsTemplate.php');
+            (new TemplateHelper())->render($__PATH . 'app/views/error/error.php');
 
             return Handler::DONE;
 

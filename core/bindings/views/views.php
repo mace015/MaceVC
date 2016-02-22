@@ -7,11 +7,29 @@
 
     $blade = new Blade($views, $cache);
 
-    function view($view, $vars = array()){
+    // Function for returning a view instead of $blade->view()->make()->render().
+    if (!function_exists('view')){
 
-        global $blade;
+        function view($view, $vars = array()){
 
-        return $blade->view()->make($view, $vars)->render();
+            global $blade;
+
+            return $blade->view()->make($view, $vars)->render();
+
+        }
+
+    }
+
+    // Function for generating full asset URL's.
+    if (!function_exists('asset')){
+
+        function asset($url) {
+
+            global $__CONFIG;
+
+            return rtrim($__CONFIG['app']['url'], '/') . '/' . ltrim($url, '/');
+
+        }
 
     }
 

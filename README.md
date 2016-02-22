@@ -1,10 +1,10 @@
-# MaceVC, a PHP framework, version 0.7.
+# MaceVC, a PHP framework, version 0.8.
 
 MaceVC, is a PHP framework inspired heavily by Laravel, and build on several Laravel components and other populair packages, anyone familiar with Laravel will feel right at home in MaceVC.
 
 Some of the features supported by MaceVC:
 
- * Routes (using the illuminate/routing package).
+ * Routing.
  * Middlewares (route specific middlewares and global middlewares).
  * Eloquent ORM.
  * Views with the Blade templating engine.
@@ -31,6 +31,24 @@ composer install
  * Want to add your name here? Create something great and submit a pull request!
 
 ### Changelog:
+
+* 0.8
+
+Added an easy URL class that can redirect to other url's with `URL::redirect($url)`, resolve relative URIs (`URL::to('test')` == `http://baseurl.dev/test`) and it can resolve URL's based on route names (`$router->get('/testRoute', array('as' => 'test'));` => `URL::route('test')` = `http://baseurl.dev/testRoute`).
+
+Moved the production (pretty) error template to `app/views/error/error.php`, so this can easily be customized.
+
+Added a new helper function: `newOld($new, $old)`, which return the first value that is set and not empty, either `$new` or `$old`.
+
+Added csrf token validation for post calls, every form that is submitted with the POST method requires a hidden field that can be generated with this function: `{{ csrf_input() }}`.
+If you do not wish to use csrf tokens, simply disable the CsrfToken middleware in the `config/app.php` config file.
+
+Added a easy session driver which support the following methods:
+    - `Session::store($key, $value)`, sets the session to its key and value.
+    - `Session::get($key)`, returns a session with that key, if the key is left empty, all sessions will be returned.
+    - `Session::delete($key)`, deletes a session with the given key.
+    - `Session::flush()`, flushes all the sessions.
+    - `Session::exists($key)`, returns `true` if the session exists or `false` if it does not exists.
 
 * 0.7
 

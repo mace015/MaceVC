@@ -1,5 +1,5 @@
 <?php
 
-    $router->get('/', array('middleware' => '\Middleware\ClosedMiddleware', 'uses' => 'UserController@showUser'));
+    $router->get('/', array('as' => 'home', 'uses' => 'UserController@showUser'));
 
 ?>

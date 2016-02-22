@@ -1,5 +1,8 @@
 <?php
 
+    use Illuminate\Http\Request;
+    use Illuminate\Routing\UrlGenerator;
+
     $controllersDir = $__PATH . 'app/controllers';
 
     Illuminate\Support\Classloader::register();
@@ -29,6 +32,28 @@
     });
 
     $app['router'] = $router;
+
+    $request = new Request;
+
+    $UrlWrapper = (new UrlGenerator($router->getRoutes(), $request))->forceRootUrl( $__CONFIG['app']['url'] );
+
+    class URL {
+
+        public static function redirect($url){
+
+            return header("Location: " . $url);
+
+        }
+
+        public static function __callStatic($name, $args){
+
+            global $UrlWrapper;
+
+    		return call_user_func_array([$UrlWrapper, $name], $args);
+
+    	}
+
+    }
 
     $request = Illuminate\Http\Request::createFromGlobals();
     $response = $app['router']->dispatch($request);

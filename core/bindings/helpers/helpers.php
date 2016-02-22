@@ -1,12 +1,23 @@
 <?php
 
-    if (!function_exists('asset')){
+    // Function for deciding wether the new value or old value should be used.
+    if (!function_exists('newOld')){
 
-        function asset($url) {
+        function newOld($new, $old) {
 
-            global $__CONFIG;
+            if (isset($new) && $new != ''){
 
-            return rtrim($__CONFIG['app']['url'], '/') . '/' . ltrim($url, '/');
+                return $new;
+
+            } else if (isset($old) && $old != ''){
+
+                return $old;
+
+            } else {
+
+                return '';
+
+            }
 
         }
 

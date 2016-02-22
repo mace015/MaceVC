@@ -1,3 +1,4 @@
+<!-- This must be plain html/css, no blade! -->
 <!DOCTYPE html>
 <html>
 

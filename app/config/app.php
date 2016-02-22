@@ -12,7 +12,7 @@
         'name' => 'MaceVC',
 
         'middleware' => array(
-            '\Middleware\GeneralMiddleware'
+            '\Middleware\CsrfToken'
         ),
 
         'mail' => array(
@@ -33,6 +33,8 @@
             'core/bindings/errors/errors',
             'core/bindings/views/views',
             'core/bindings/mail/mail',
+            'core/bindings/csrf/csrf',
+            'core/bindings/session/session',
             'core/bindings/router/router'
         ),
 
