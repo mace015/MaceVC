@@ -4,11 +4,9 @@
 
     class UserController extends Controller {
 
-        public function showUser(){
+        public function index(){
 
-            $user = User::find(2);
-
-            return view('test', compact('user'));
+            return view('test');
 
         }
 

@@ -38,13 +38,25 @@
     $UrlWrapper = new UrlGenerator($router->getRoutes(), $request);
     $UrlWrapper->forceRootUrl($__CONFIG['app']['url']);
 
-    class URL {
+    class Redirect {
 
-        public static function redirect($url){
+        public static function to($url){
 
             return header("Location: " . $url);
 
         }
+
+        public static function route($route){
+
+            global $UrlWrapper;
+
+            return header("Location: " . $UrlWrapper->route($route));
+
+        }
+
+    }
+
+    class URL {
 
         public static function __callStatic($name, $args){
 

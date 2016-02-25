@@ -1,4 +1,4 @@
-# MaceVC, a PHP framework, version 0.8.
+# MaceVC, a PHP framework, version 0.9.
 
 MaceVC, is a PHP framework inspired heavily by Laravel, and build on several Laravel components and other populair packages, anyone familiar with Laravel will feel right at home in MaceVC.
 
@@ -12,6 +12,7 @@ Some of the features supported by MaceVC:
  * CLI (Command Line Interface) for easily creating Controllers, Models and Middlewares!
  * Easy mailing with the build-in mail class!
  * Session driver for easy use of sessions.
+ * A built-in easy to use Auth class for user Authentication.
 
 There are lots of features that have yet to be implemented, if you have any good ideas, feel free to submit a pull request!
 
@@ -33,6 +34,34 @@ composer install
 
 ### Changelog:
 
+* 0.9
+
+Fixed a bug with the `Session::exists($key)` method, and the `dd()` function to support pretty styling and interaction.
+
+Added a new class: `Hash`, which allows for the creation of a (password) hash with `Hash::make($password)` and the verification of a password versus a hash with `Hash::verify($password, $hash)`.
+
+Added a new  class: `Redirect`, which allows for easy redirection to both full url's (`Redirect::to($url)`) and routes (`Redirect::route($route)`).
+
+Removed `URL::redirect()`.
+
+Added the helper function `d($data)`, similar to `dd($data)`, but this one does not `die()`;
+
+Added a new class: `Auth`, which allows for easy user authentication.
+
+`Auth::user()`, returns the user model if a user is logged in, else it returns `null`.
+
+`Auth::check()`, returns `true` if a user is logged in, else it returns `false`.
+
+`Auth::login($id, $remember)`, allows for manual login with a user id, if `$remember` is set to true, a remember cookie will be created.
+
+`Auth::attempt(array('username' => $username, 'password' => $password), $remember)`, attempt to authenticate a user, returns `false` if fails.
+
+`Auth::validate(array('username' => $username, 'password' => $password))`, validates user credentials without authenticating a user returns `true` or `false`.
+
+`Auth::logout()`, logs a user out.
+
+Added two new middlewares: Authenticated and Guest.
+
 * 0.8
 
 Added an easy URL class that can redirect to other url's with `URL::redirect($url)`, resolve relative URIs (`URL::to('test')` == `http://baseurl.dev/test`) and it can resolve URL's based on route names (`$router->get('/testRoute', array('as' => 'test'));` => `URL::route('test')` = `http://baseurl.dev/testRoute`).
@@ -41,7 +70,7 @@ Moved the production (pretty) error template to `app/views/error/error.php`, so 
 
 Added a new helper function: `newOld($new, $old)`, which return the first value that is set and not empty, either `$new` or `$old`.
 
-Added csrf token validation for post calls, every form that is submitted with the POST method requires a hidden field that can be generated with this function: `{{ csrf_input() }}`.
+Added csrf token validation for post calls, every form that is submitted with the POST method requires a hidden field that can be generated with this function: `{!! csrf_input() !!}`.
 If you do not wish to use csrf tokens, simply disable the CsrfToken middleware in the `config/app.php` config file.
 
 Added a easy session driver which support the following methods:

@@ -4,6 +4,12 @@
 
     class Session {
 
+        public static function exists($key){
+
+            return isset($_SESSION[$key]);
+
+        }
+
         public static function __callStatic($name, $args){
 
             global $sessionWrapper;

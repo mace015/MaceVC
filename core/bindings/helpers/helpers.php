@@ -23,4 +23,17 @@
 
     }
 
+    // Function to dump data, similar to dd(), but this function has no die();
+    if (!function_exists('d')){
+
+        function d($data){
+
+            array_map(function ($x) {
+                (new Illuminate\Support\Debug\Dumper)->dump($x);
+            }, func_get_args());
+
+        }
+
+    }
+
 ?>

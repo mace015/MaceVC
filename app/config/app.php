@@ -11,6 +11,13 @@
 
         'name' => 'MaceVC',
 
+        'auth' => array(
+            'model'             => '\Models\User',
+            'username'          => 'username',
+            'password'          => 'password',
+            'remember_token'    => 'remember_token'
+        ),
+
         'middleware' => array(
             '\Middleware\CsrfToken'
         ),
@@ -35,6 +42,8 @@
             'core/bindings/mail/mail',
             'core/bindings/csrf/csrf',
             'core/bindings/session/session',
+            'core/bindings/hash/hash',
+            'core/bindings/auth/auth',
             'core/bindings/router/router'
         ),
 
