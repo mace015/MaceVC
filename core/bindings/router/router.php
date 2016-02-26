@@ -25,6 +25,18 @@
         $__CONFIG['app']['middleware'][$key] = '\\' . ltrim($middleware, '\\');
     }
 
+    class Route {
+
+        public static function __callStatic($name, $args){
+
+            global $router;
+
+    		return call_user_func_array([$router, $name], $args);
+
+    	}
+
+    }
+
     $router->group(array('middleware' => $__CONFIG['app']['middleware']), function() use ($__PATH, $router){
 
         require $__PATH . 'app/routes.php';

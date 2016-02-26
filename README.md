@@ -1,4 +1,6 @@
-# MaceVC, a PHP framework, version 0.9.
+![MaceVC](http://www.macemuilman.nl/MaceVC.png)
+
+# MaceVC, a PHP framework, version 0.9.1
 
 MaceVC, is a PHP framework inspired heavily by Laravel, and build on several Laravel components and other populair packages, anyone familiar with Laravel will feel right at home in MaceVC.
 
@@ -34,97 +36,4 @@ composer install
 
 ### Changelog:
 
-* 0.9
-
-Fixed a bug with the `Session::exists($key)` method, and the `dd()` function to support pretty styling and interaction.
-
-Added a new class: `Hash`, which allows for the creation of a (password) hash with `Hash::make($password)` and the verification of a password versus a hash with `Hash::verify($password, $hash)`.
-
-Added a new  class: `Redirect`, which allows for easy redirection to both full url's (`Redirect::to($url)`) and routes (`Redirect::route($route)`).
-
-Removed `URL::redirect()`.
-
-Added the helper function `d($data)`, similar to `dd($data)`, but this one does not `die()`;
-
-Added a new class: `Auth`, which allows for easy user authentication.
-
-`Auth::user()`, returns the user model if a user is logged in, else it returns `null`.
-
-`Auth::check()`, returns `true` if a user is logged in, else it returns `false`.
-
-`Auth::login($id, $remember)`, allows for manual login with a user id, if `$remember` is set to true, a remember cookie will be created.
-
-`Auth::attempt(array('username' => $username, 'password' => $password), $remember)`, attempt to authenticate a user, returns `false` if fails.
-
-`Auth::validate(array('username' => $username, 'password' => $password))`, validates user credentials without authenticating a user returns `true` or `false`.
-
-`Auth::logout()`, logs a user out.
-
-Added two new middlewares: Authenticated and Guest.
-
-* 0.8
-
-Added an easy URL class that can redirect to other url's with `URL::redirect($url)`, resolve relative URIs (`URL::to('test')` == `http://baseurl.dev/test`) and it can resolve URL's based on route names (`$router->get('/testRoute', array('as' => 'test'));` => `URL::route('test')` = `http://baseurl.dev/testRoute`).
-
-Moved the production (pretty) error template to `app/views/error/error.php`, so this can easily be customized.
-
-Added a new helper function: `newOld($new, $old)`, which return the first value that is set and not empty, either `$new` or `$old`.
-
-Added csrf token validation for post calls, every form that is submitted with the POST method requires a hidden field that can be generated with this function: `{!! csrf_input() !!}`.
-If you do not wish to use csrf tokens, simply disable the CsrfToken middleware in the `config/app.php` config file.
-
-Added a easy session driver which support the following methods:
-
-`Session::store($key, $value)`, sets the session to its key and value.
-
-`Session::get($key)`, returns a session with that key, if the key is left empty, all sessions will be returned.
-
-`Session::delete($key)`, deletes a session with the given key.
-
-`Session::flush()`, flushes all the sessions.
-
-`Session::exists($key)`, returns `true` if the session exists or `false` if it does not exists.
-
-* 0.7
-
-Added a class for reading the config, for example, if I want to read the debug setting in the app.php file in the config folder, i would do it like this: `Config::get('app.debug')`.
-I would highly recommend you use `$__CONFIG` in any custom bindings so its not dependant on the config binding!
-
-Added a demo env file (`env_demo`) and a `.htaccess` file out of the box;
-
-* 0.6
-
-Added a build-in mail class (build on top of phpmailer) to easily send mails!
-The `Mail::send` function accepts 3 parameters: `$view (path to a blade view)`, `$data (data passed into the blade view)`, `$callback (a callback for extended options)`.
-Inside the last parameter, `$callback`, you can set any option [PHPMailer](https://github.com/PHPMailer/PHPMailer) has to offer!
-```php
-Mail::send('email', array('text' => 'This is an email!'), function($mail){
-    $mail->addAddress('john@doe.nl', 'John Doe');
-    $mail->Subject = 'This is my email subject!';
-});
-```
-
-* 0.5
-
-Added a CLI (Command Line Interface) that makes it easy to create new Controllers, Models and Middlewares.
-The CLI can be easily started by using `php console` in the root folder of a MaceVC project.
-
-* 0.4
-
-Added a pretty error page for production when an exception is thrown, can be changed right now by simply editing `core/bindings/errors/errorTemplate.php`, later on it will be posibile to use a custom file path for this file.
-
-* 0.3
-
-Added routes specific and global middlewares, these are stored in `app/middlewares/`.
-
-* 0.2
-
-Completely overhauled the folder structure of the framework, we now have a nice `public/` folder from where the application is started.
-
-Also added the function `asset()` to easily load assets into blade templates from the `public/` directory.
-
-* 0.1
-
-Today is a fantastic day, on `$this->day()` ;) we embark on an adventure to create a beautiful framework inspired by Laravel.
-
-Added Eloquent ORM (database driver), pretty errors, routing (laravel style), the awesome blade templating engine and last but not least, `.env` environment variables.
+See changelog.txt

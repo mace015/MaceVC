@@ -9,7 +9,7 @@
 
             if (Auth::check()){
 
-                Redirect::to(URL::to('/'));
+                return Redirect::to(URL::to('/'));
 
             }
 

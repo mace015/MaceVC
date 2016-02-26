@@ -104,11 +104,11 @@ class Authentication {
 
     public function validate($credentials){
 
-        $user = call_user_func_array(array($this->model, 'where'), array($this->username, '=', $credentials[$this->username]));
+        $user = call_user_func_array(array($this->model, 'where'), array($this->username, '=', $credentials[0]));
         $user = $user->first();
         if ($user){
 
-            if (password_verify($credentials[$this->password], $user->{$this->password})){
+            if (password_verify($credentials[1], $user->{$this->password})){
 
                 return $user->id;
 

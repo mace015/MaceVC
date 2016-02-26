@@ -1,5 +1,5 @@
 <?php
 
-    $router->get('/', array('as' => 'home', 'uses' => 'UserController@index'));
+    Route::get('/', array('as' => 'home', 'uses' => 'UserController@index'));
 
 ?>
