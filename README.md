@@ -1,6 +1,6 @@
 ![MaceVC](http://www.macemuilman.nl/MaceVC.png)
 
-# MaceVC, a PHP framework, version 0.9.1
+# MaceVC, a PHP framework, version 0.9.2
 
 MaceVC, is a PHP framework inspired heavily by Laravel, and build on several Laravel components and other populair packages, anyone familiar with Laravel will feel right at home in MaceVC.
 
@@ -30,8 +30,9 @@ composer install
 
 ### Contributors:
 
- * [Mace Muilman](http://macemuilman.nl) ([Github](https://github.com/mace015)) Creator of MaceVC
- * [Martijn de Ridder](http://moodles.nl) ([Github](https://github.com/moodlesmedia)) Extensive testing
+ * [Mace Muilman](http://macemuilman.nl) ([Github](https://github.com/mace015)) Creator of MaceVC.
+ * [Martijn de Ridder](http://moodles.nl) ([Github](https://github.com/moodlesmedia)) Extensive testing.
+ * [Jannick Berkhout](http://moodles.nl) ([Github](https://github.com/JannickMoodles/JValidate)) Design.
  * Want to add your name here? Create something great and submit a pull request!
 
 ### Changelog:

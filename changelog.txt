@@ -1,3 +1,9 @@
+* 0.9.2
+
+-   Added a facade for the routes. You can now use `Route::get()` for example.
+-   Added a new welcome view.
+-   Added a new error view for when debug is set to false;
+
 * 0.9.1
 
 -   Moved the changelog to changelog.txt.
@@ -37,7 +43,6 @@
 * 0.7
 
 -   Added a class for reading the config, for example, if I want to read the debug setting in the app.php file in the config folder, i would do it like this: `Config::get('app.debug')`. I would highly recommend you use `$__CONFIG` in any custom bindings so its not dependant on the config binding!
-
 -   Added a demo env file (`env_demo`) and a `.htaccess` file out of the box;
 
 * 0.6

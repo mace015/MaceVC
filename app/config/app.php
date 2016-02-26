@@ -3,11 +3,11 @@
     // Application configuration.
     return array(
 
-        'debug' => true,
+        'debug' => false,
 
         'url' => 'http://framework.dev:8000/',
 
-        'email' => 'test@macevc.com',
+        'email' => 'john@example.com',
 
         'name' => 'MaceVC',
 
