@@ -2,7 +2,7 @@
 
 # MaceVC, a PHP framework, version 0.9.2
 
-MaceVC, is a PHP framework inspired heavily by Laravel, and build on several Laravel components and other populair packages, anyone familiar with Laravel will feel right at home in MaceVC.
+MaceVC is a small hobby project to experiment with building a framework on existing components, its a PHP framework inspired heavily by Laravel, and build on several Laravel components and other populair packages, anyone familiar with Laravel will feel right at home in MaceVC.
 
 Some of the features supported by MaceVC:
 

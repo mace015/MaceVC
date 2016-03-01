@@ -3,7 +3,7 @@
     // Application configuration.
     return array(
 
-        'debug' => false,
+        'debug' => true,
 
         'url' => 'http://framework.dev:8000/',
 
