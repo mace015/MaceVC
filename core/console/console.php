@@ -2,7 +2,7 @@
 
     use Symfony\Component\Console\Application;
 
-    $application = new Application("MaceVC Framework CLI", "0.9.2");
+    $application = new Application("MaceVC Framework CLI", "0.9.3");
 
     $application->add(new Console\Command\MakeController\MakeControllerCommand());
     $application->add(new Console\Command\MakeMiddleware\MakeMiddlewareCommand());

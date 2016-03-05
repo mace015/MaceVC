@@ -1,3 +1,8 @@
+* 0.9.3
+
+- Added the DB facade.
+- Enabled the query log, this log can be read by `DB::getConnection()->getQueryLog()`.
+
 * 0.9.2
 
 -   Added a facade for the routes. You can now use `Route::get()` for example.
