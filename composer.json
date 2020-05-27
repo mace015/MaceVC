@@ -7,7 +7,7 @@
         "philo/laravel-blade": "3.*",
         "vlucas/phpdotenv": "2.2",
         "symfony/console": "^3.0",
-        "phpmailer/phpmailer": "^5.2",
+        "phpmailer/phpmailer": "^6.1",
         "volnix/csrf": "^1.2",
         "codezero/session": "^1.0",
         "symfony/var-dumper": "^3.0"
